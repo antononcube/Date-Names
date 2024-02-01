@@ -1,4 +1,3 @@
-```raku
 unit module Date::Names::sr;
 
 #********
@@ -67,4 +66,3 @@ our $mona = <
 # 8
 our $dowa  = <
 >;
-```
