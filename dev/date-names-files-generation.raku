@@ -8,6 +8,9 @@ use LLM::Prompts;
 # but it can take up to 90 seconds per generation.
 # The other models 3-10 times faster.
 
+# When using gpt-4 or gpt-4-1106-preview we might get the Raku code placed within Markdown code delimiters.
+# Also, most of the time the comments are in the original example file are skipped.
+
 my $dirName = $*CWD;
 
 my $exampleFile = slurp($dirName ~ '/lib/Date/Names/en.rakumod');
@@ -20,7 +23,8 @@ my $conf = llm-configuration('ChatGPT', model => 'gpt-4-1106-preview', max-token
 #my $conf = llm-configuration('ChatGPT', model => 'gpt-3.5-turbo-16k', max-tokens => 4096, temperature => 0.2);
 
 my &fgen = llm-function(
-        { "Generate the Raku module code for the language $^a that corresponds to the following module code for English:\n\n $^b" ~ llm-prompt('NothingElse')('Raku code') },
+        { "Generate the Raku module code for the language $^a that corresponds to the following module code for English:\n\n $^b"
+                ~ "\n\nKeep the code comments.\n" ~ llm-prompt('NothingElse')('Raku code') },
         e => $conf);
 
 my @langs = <Bulgarian Portuguese Russian Serbian Turkish>;
