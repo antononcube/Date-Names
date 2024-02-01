@@ -1,20 +1,20 @@
 {
-  "auth": "zef:tbrowder",
-  "author": "github:tbrowder",
+  "name": "Date::Names",
+  "description": "Provides names for month and weekday numbers (multilingual).",
+  "version": "2.2.4",
+  "perl": "6.c",
   "authors": [
     "Tom Browder <tbrowder@acm.org>"
   ],
-  "build-depends": [
-  ],
+  "auth": "zef:tbrowder",
   "depends": [
     "Abbreviations"
   ],
-  "description": "Provides names for month and weekday numbers (multilingual).",
-  "license": "Artistic-2.0",
-  "name": "Date::Names",
-  "perl": "6.c",
+  "build-depends": [],
+  "test-depends": [],
   "provides": {
     "Date::Names": "lib/Date/Names.rakumod",
+    "Date::Names::bg": "lib/Date/Names/bg.rakumod",
     "Date::Names::de": "lib/Date/Names/de.rakumod",
     "Date::Names::en": "lib/Date/Names/en.rakumod",
     "Date::Names::es": "lib/Date/Names/es.rakumod",
@@ -25,8 +25,11 @@
     "Date::Names::nl": "lib/Date/Names/nl.rakumod",
     "Date::Names::nn": "lib/Date/Names/nn.rakumod",
     "Date::Names::pl": "lib/Date/Names/pl.rakumod",
+    "Date::Names::pt": "lib/Date/Names/pt.rakumod",
     "Date::Names::ro": "lib/Date/Names/ro.rakumod",
     "Date::Names::ru": "lib/Date/Names/ru.rakumod",
+    "Date::Names::sr": "lib/Date/Names/sr.rakumod",
+    "Date::Names::tr": "lib/Date/Names/tr.rakumod",
     "Date::Names::uk": "lib/Date/Names/uk.rakumod"
   },
   "resources": [
@@ -36,11 +39,10 @@
     "make-tests.raku",
     "xx.rakumod"
   ],
-  "source-type": "git",
-  "source-url": "git://github.com/tbrowder/Date-Names.git",
   "support": {
     "bugtracker": "https://github.com/tbrowder/Date-Names/issues"
   },
+  "license": "Artistic-2.0",
   "tags": [
     "date",
     "names",
@@ -49,7 +51,7 @@
     "moy",
     "dow"
   ],
-  "test-depends": [
-  ],
-  "version": "2.2.4"
+  "source-url": "git://github.com/tbrowder/Date-Names.git",
+  "author": "github:tbrowder",
+  "source-type": "git"
 }
